@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         User user = new User();
         user.mengisiData(1, "Budi", "budi@mail.com", "rahasia123", "Jakarta");
 
@@ -16,42 +15,14 @@ public class Main {
         Seleksi seleksi = new Seleksi();
         seleksi.mengisiData(1, lamaran.id_lamaran, "Interview", "Lolos");
 
-        Perusahaan perusahaan = new Perusahaan();
-        perusahaan.mengisiData(1, "PT Maju Jaya", "Jakarta", "hr@majujaya.com");
-
-        Admin admin = new Admin();
-        admin.mengisiData(1, "Septian", "admin@mail.com", "admin123");
-
-        Notifikasi notifikasi = new Notifikasi();
-        notifikasi.mengisiData(
-            1,
-            user.id_user,
-            "Selamat! Anda lolos tahap Interview.",
-            "2026-03-05",
-            "Belum Dibaca"
-        );
-
         user.tampilInfo();
         System.out.println();
-
         cv.tampilInfo();
         System.out.println();
-
         lowongan.tampilInfo();
         System.out.println();
-
         lamaran.tampilInfo();
         System.out.println();
-
         seleksi.tampilInfo();
-        System.out.println();
-
-        perusahaan.tampilInfo();
-        System.out.println();
-
-        admin.tampilInfo();
-        System.out.println();
-
-        notifikasi.tampilInfo();
     }
 }
