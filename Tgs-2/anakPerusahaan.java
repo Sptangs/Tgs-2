@@ -3,10 +3,14 @@ public class anakPerusahaan extends Perusahaan {
     public String namaInduk;
     public String bidangUsaha;
 
-    public void mengisiDataAnak(int id, String nama, String alamat, String email,
+    public anakPerusahaan(int id) {
+        super(id);  // panggil constructor Perusahaan
+    }
+
+    public void mengisiDataAnak(String nama, String alamat, String email,
                                 String namaInduk, String bidangUsaha) {
 
-        super.mengisiData(id, nama, alamat, email);
+        super.mengisiData(nama, alamat, email);
 
         this.namaInduk = namaInduk;
         this.bidangUsaha = bidangUsaha;
