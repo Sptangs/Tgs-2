@@ -1,18 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        // test abstract
-        Perusahaan p = new Perusahaan(99);
+        // Abstract class test
+        cobaAbstract p = new Perusahaan(99);
         p.mengisiData("PT. Maju Jaya", "Jakarta", "info@majujaya.com");
         p.tampilInfo();
-        p.tampilkanId();  // method dari Entitas
+        p.tampilkanId();
         
         System.out.println();
         
-        // Test Interface
-        Seleksi s = new Seleksi();
-        s.mengisiData(1, 101, "Wawancara", "Lulus");
-        s.tampilInfo();
-        s.verifikasi();
+        // Interface test - PASTIKAN PAKAI OBJEK YANG SAMA
+        Seleksi s = new Seleksi();           // buat objek
+        s.mengisiData(1, 101, "Wawancara", "Lulus");  // isi data
+        s.tampilInfo();                      // cetak data
+        s.verifikasi();                      // baru verifikasi
         s.tentukanHasil();
         s.kirimNotifikasi();
     }

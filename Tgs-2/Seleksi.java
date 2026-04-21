@@ -1,4 +1,4 @@
-class Seleksi implements cobaInterface {
+class Seleksi implements SeleksiProses, PengirimNotifikasi {
     public int id_seleksi;
     public int id_lamaran;
     public String tahap;
@@ -19,7 +19,6 @@ class Seleksi implements cobaInterface {
         System.out.println("Hasil       : " + hasil);
     }
 
-    // Implementasi method dari interface DapatDiproses
     @Override
     public void verifikasi() {
         System.out.println("Verifikasi seleksi ID " + id_seleksi);
