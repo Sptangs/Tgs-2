@@ -1,4 +1,11 @@
 public class Main {
+    public static void jalankanSeleksi(SeleksiProses sp) {
+    System.out.println("=== Proses Seleksi (Polymorphism) ===");
+    sp.verifikasi();
+    sp.tentukanHasil();
+    System.out.println();
+}
+
     public static void main(String[] args) {
         // Abstract class test
         cobaAbstract p = new Perusahaan(99);
@@ -8,12 +15,15 @@ public class Main {
         
         System.out.println();
         
-        // Interface test - PASTIKAN PAKAI OBJEK YANG SAMA
-        Seleksi s = new Seleksi();           // buat objek
-        s.mengisiData(1, 101, "Wawancara", "Lulus");  // isi data
-        s.tampilInfo();                      // cetak data
-        s.verifikasi();                      // baru verifikasi
-        s.tentukanHasil();
-        s.kirimNotifikasi();
+        Seleksi s1 = new Seleksi();
+        s1.mengisiData(1, 101, "Wawancara", "Lulus");
+        s1.tampilInfo();
+        jalankanSeleksi(s1);
+
+        Seleksi s2 = new Seleksi();
+        s2.mengisiData(2, 102, "Tes Tulis", "Tidak Lulus");
+        s2.tampilInfo();
+        jalankanSeleksi(s2); 
+    
     }
 }
